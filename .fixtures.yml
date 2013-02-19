@@ -1,0 +1,6 @@
+fixtures:
+  repositories:
+    java: git://github.com/evenup/evenup-java.git
+  symlinks:
+    ec2_tools: "#{source_dir}"
+

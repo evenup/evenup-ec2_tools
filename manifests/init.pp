@@ -25,7 +25,7 @@ class ec2_tools {
   include java
   $ec2_tools_version = hiera('ec2_tools::ec2_tools_version', '1.6.6.1')
   $iam_tools_version = hiera('ec2_tools::iam_tools_version', '1.5.0')
-  $static_url = hiera('static_url')
+  $static_url = hiera('static_url', 'files')
 
   $ec2_dir_name = "ec2-api-tools-${ec2_tools_version}"
   $iam_dir_name = "iamcli-${iam_tools_version}"
