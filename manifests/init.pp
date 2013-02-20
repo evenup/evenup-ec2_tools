@@ -31,7 +31,7 @@ class ec2_tools {
   $iam_dir_name = "iamcli-${iam_tools_version}"
   $ec2_filename = "${ec2_dir_name}.zip"
   $iam_filename = "${iam_dir_name}.zip"
-  $tmpdir = "/tmp"
+  $tmpdir = '/tmp'
 
   package {
     's3cmd':
@@ -42,14 +42,14 @@ class ec2_tools {
     # TODO - pull credentials out and put in hiera
     '/root/.s3cfg':
       ensure  => file,
-      mode    => 0400,
+      mode    => '0400',
       owner   => root,
       group   => root,
       content => template('ec2_tools/s3cfg.erb');
 
     '/etc/profile.d/ec2_tools.sh':
       ensure  => file,
-      mode    => 0555,
+      mode    => '0555',
       owner   => root,
       group   => root,
       source  => 'puppet:///modules/ec2_tools/ec2_tools.profile'
