@@ -3,7 +3,7 @@ What is it?
 
 A Puppet module that installs tools for working with Amazon's Web Services.
 
-Released under the Apache 2.0 licence
+Python packages built with fpm.
 
 Usage:
 ------
@@ -16,6 +16,11 @@ To install:
 
 Known Issues:
 -------------
+
+License:
+--------
+Released under the Apache 2.0 licence
+
 
 Contribute:
 -----------
