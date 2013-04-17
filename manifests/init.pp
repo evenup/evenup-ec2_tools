@@ -33,10 +33,14 @@ class ec2_tools {
   $iam_filename = "${iam_dir_name}.zip"
   $tmpdir = '/tmp'
 
-  package {
-    's3cmd':
-      ensure  => installed;
+  package { 's3cmd':
+    ensure  => installed,
   }
+
+  package { 'python-awscli':
+    ensure  => latest,
+  }
+
 
   file {
     # TODO - pull credentials out and put in hiera
