@@ -1,5 +1,5 @@
 name 'evenup-ec2_tools'
-version '1.2.0'
+version '1.3.0'
 author 'Justin Lambert <jlambert@letsevenup.com>'
 license 'Apache'
 summary 'Manages the ec2-tools.'
