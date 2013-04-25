@@ -7,7 +7,7 @@
 #
 # [*ec2_tools*]
 #   String. Controls the version of ec2-api-tools to be installed
-#   Defaults to 1.5.5.0.
+#   Defaults to 1.6.6.`.
 #
 #
 # === Examples
@@ -20,12 +20,13 @@
 #
 # * Justin Lambert <mailto:jlambert@letsevenup.com>
 #
-class ec2_tools {
+class ec2_tools(
+  $ec2_tools_version  = '1.6.6.1',
+  $iam_tools_version  = '1.5.0',
+  $static_url         = 'files',
+) {
 
   include java
-  $ec2_tools_version = hiera('ec2_tools::ec2_tools_version', '1.6.6.1')
-  $iam_tools_version = hiera('ec2_tools::iam_tools_version', '1.5.0')
-  $static_url = hiera('static_url', 'files')
 
   $ec2_dir_name = "ec2-api-tools-${ec2_tools_version}"
   $iam_dir_name = "iamcli-${iam_tools_version}"
