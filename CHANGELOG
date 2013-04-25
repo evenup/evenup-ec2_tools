@@ -1,3 +1,5 @@
+v1.3.1
+  Removed hiera() function calls, converted to paramertized class
 v1.3.0
   Add python aws-cli tool
 v1.2.0:
