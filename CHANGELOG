@@ -1,3 +1,5 @@
+  Default to install python awscli and s3cmd, remove java tools
+  Add build script for RPM generation using fpm
 v1.3.1
   Removed hiera() function calls, converted to paramertized class
 v1.3.0
