@@ -1,3 +1,4 @@
+20130904 v2.0.0
   Default to install python awscli and s3cmd, remove java tools
   Add build script for RPM generation using fpm
 v1.3.1
