@@ -92,11 +92,11 @@ class ec2_tools(
     $tmpdir = '/tmp'
 
     file {  '/etc/profile.d/ec2_tools.sh':
-      ensure  => file,
-      mode    => '0555',
-      owner   => root,
-      group   => root,
-      source  => 'puppet:///modules/ec2_tools/ec2_tools.profile'
+      ensure => file,
+      mode   => '0555',
+      owner  => root,
+      group  => root,
+      source => 'puppet:///modules/ec2_tools/ec2_tools.profile'
     }
 
     exec { 'ec2_tools-fetch':
@@ -138,13 +138,13 @@ class ec2_tools(
     }
 
     file { '/opt/ec2-api-tools':
-      ensure  => link,
-      target  => "/opt/${ec2_dir_name}"
+      ensure => link,
+      target => "/opt/${ec2_dir_name}"
     }
 
     file { '/opt/iam-api-tools':
-      ensure  => link,
-      target  => "/opt/${iam_dir_name}"
+      ensure => link,
+      target => "/opt/${iam_dir_name}"
     }
   } else {
     # Remove java tools
@@ -152,17 +152,17 @@ class ec2_tools(
     $iam_dir_name = "iamcli-${iam_tools_version}"
 
     file {  '/etc/profile.d/ec2_tools.sh':
-      ensure  => absent,
+      ensure => absent,
     }
 
     file { '/opt/ec2-api-tools':
-      ensure  => absent,
-      target  => "/opt/${ec2_dir_name}",
+      ensure => absent,
+      target => "/opt/${ec2_dir_name}",
     }
 
     file { '/opt/iam-api-tools':
-      ensure  => absent,
-      target  => "/opt/${iam_dir_name}",
+      ensure => absent,
+      target => "/opt/${iam_dir_name}",
     }
 
     file { "/opt/${ec2_dir_name}":
